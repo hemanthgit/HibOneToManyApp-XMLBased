@@ -41,6 +41,8 @@ public class Test {
 		Transaction transaction = session.beginTransaction();
 		try {
 			session.save(ebayCart);
+//			Note : As we mentioned cascade="all", Item objects will get saved along with Cart Object.
+//			Same applied while 'deletion', i.e., if we delete Cart object then referenced Item objects get deleted.
 			transaction.commit();
 			/* END Inserting Data */
 			
